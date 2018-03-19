@@ -32,7 +32,7 @@ public class TestCultureSurvey {
 
 	@Test
 	public void testCultureSurvey_1() throws InterruptedException, IOException {
-		String file = "/Users/du/eclipse-workspace/SurveySaurus/src/url";
+		String file = "/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/url";
 		// numberOfTest number of test using get specific Url in File
 		for (int numberOfTest = 0; numberOfTest <= 19; numberOfTest++) {
 			String url = testAutoraterCultureSurvey.getSpecificUrl(file, numberOfTest);
