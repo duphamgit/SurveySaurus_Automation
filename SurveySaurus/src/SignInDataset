@@ -1,0 +1,16 @@
+https://beta-swf.surveysaurus.com/signin
+#case 1: Empty Email 
+
+123456
+#case 2: Empty Password
+dupham.autorater@yopmail.com
+
+#case 3: Email is invalid
+dupham.autorater@   yopmail.com
+123456
+#case 4: Check Invalid email
+dupham.autorater@yopmail.com
+123456123
+#case 5: Check Sign In successfully
+dupham.autorater@yopmail.com
+123456

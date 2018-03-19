@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="123948" started-at="2018-03-19T14:26:44Z" finished-at="2018-03-19T14:28:48Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="123948" started-at="2018-03-19T14:26:44Z" finished-at="2018-03-19T14:28:48Z">
+      <class name="org.webdriver.tests.TestSignIn_1">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:org.webdriver.tests.TestSignIn_1@2781e022]" name="setUp" is-config="true" duration-ms="4758" started-at="2018-03-19T14:26:44Z" finished-at="2018-03-19T14:26:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testSignIn_1()[pri:0, instance:org.webdriver.tests.TestSignIn_1@2781e022]" name="testSignIn_1" duration-ms="20475" started-at="2018-03-19T14:26:49Z" finished-at="2018-03-19T14:27:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSignIn_1 -->
+        <test-method status="PASS" signature="end()[pri:0, instance:org.webdriver.tests.TestSignIn_1@2781e022]" name="end" is-config="true" duration-ms="94" started-at="2018-03-19T14:27:09Z" finished-at="2018-03-19T14:27:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- end -->
+      </class> <!-- org.webdriver.tests.TestSignIn_1 -->
+      <class name="org.webdriver.tests.TestSignIn_5">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:org.webdriver.tests.TestSignIn_5@57e1b0c]" name="setUp" is-config="true" duration-ms="3028" started-at="2018-03-19T14:27:09Z" finished-at="2018-03-19T14:27:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testSignIn_5()[pri:0, instance:org.webdriver.tests.TestSignIn_5@57e1b0c]" name="testSignIn_5" duration-ms="22125" started-at="2018-03-19T14:27:13Z" finished-at="2018-03-19T14:27:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSignIn_5 -->
+        <test-method status="PASS" signature="end()[pri:0, instance:org.webdriver.tests.TestSignIn_5@57e1b0c]" name="end" is-config="true" duration-ms="87" started-at="2018-03-19T14:27:35Z" finished-at="2018-03-19T14:27:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- end -->
+      </class> <!-- org.webdriver.tests.TestSignIn_5 -->
+      <class name="org.webdriver.tests.TestSignIn_4">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:org.webdriver.tests.TestSignIn_4@4232c52b]" name="setUp" is-config="true" duration-ms="2782" started-at="2018-03-19T14:27:35Z" finished-at="2018-03-19T14:27:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testSignIn_4()[pri:0, instance:org.webdriver.tests.TestSignIn_4@4232c52b]" name="testSignIn_4" duration-ms="21934" started-at="2018-03-19T14:27:38Z" finished-at="2018-03-19T14:27:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSignIn_4 -->
+        <test-method status="PASS" signature="end()[pri:0, instance:org.webdriver.tests.TestSignIn_4@4232c52b]" name="end" is-config="true" duration-ms="85" started-at="2018-03-19T14:27:59Z" finished-at="2018-03-19T14:28:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- end -->
+      </class> <!-- org.webdriver.tests.TestSignIn_4 -->
+      <class name="org.webdriver.tests.TestSignIn_3">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:org.webdriver.tests.TestSignIn_3@1877ab81]" name="setUp" is-config="true" duration-ms="2802" started-at="2018-03-19T14:28:00Z" finished-at="2018-03-19T14:28:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testSignIn_3()[pri:0, instance:org.webdriver.tests.TestSignIn_3@1877ab81]" name="testSignIn_3" duration-ms="21049" started-at="2018-03-19T14:28:02Z" finished-at="2018-03-19T14:28:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSignIn_3 -->
+        <test-method status="PASS" signature="end()[pri:0, instance:org.webdriver.tests.TestSignIn_3@1877ab81]" name="end" is-config="true" duration-ms="83" started-at="2018-03-19T14:28:23Z" finished-at="2018-03-19T14:28:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- end -->
+      </class> <!-- org.webdriver.tests.TestSignIn_3 -->
+      <class name="org.webdriver.tests.TestSignIn_2">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:org.webdriver.tests.TestSignIn_2@305fd85d]" name="setUp" is-config="true" duration-ms="2786" started-at="2018-03-19T14:28:23Z" finished-at="2018-03-19T14:28:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testSignIn_2()[pri:0, instance:org.webdriver.tests.TestSignIn_2@305fd85d]" name="testSignIn_2" duration-ms="21735" started-at="2018-03-19T14:28:26Z" finished-at="2018-03-19T14:28:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSignIn_2 -->
+        <test-method status="PASS" signature="end()[pri:0, instance:org.webdriver.tests.TestSignIn_2@305fd85d]" name="end" is-config="true" duration-ms="77" started-at="2018-03-19T14:28:48Z" finished-at="2018-03-19T14:28:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- end -->
+      </class> <!-- org.webdriver.tests.TestSignIn_2 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
