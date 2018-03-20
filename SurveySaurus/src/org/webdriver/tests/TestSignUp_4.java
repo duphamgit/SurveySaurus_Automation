@@ -4,6 +4,8 @@
 package org.webdriver.tests;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -18,9 +20,9 @@ import org.webdriver.autorater.TestHome;
 /**
  * @author du
  * 
- *         Check warning message is displayed if User input existed email fields
+ *         User can click on [Create Account] button, Create account successful
  */
-public class TestSignUp_3 {
+public class TestSignUp_4 {
 
 	WebDriver driver;
 	TestHome testHome;
@@ -36,7 +38,7 @@ public class TestSignUp_3 {
 	}
 
 	@Test
-	public void testSignUp_3() throws IOException, InterruptedException {
+	public void testSignUp_4() throws IOException, InterruptedException {
 		// Home Page
 		String url = testHome.getSpecificUrl(
 				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 1);
@@ -61,8 +63,8 @@ public class TestSignUp_3 {
 				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 8);
 		signUpPage.inputLastName_individual(lastname);
 		// email
-		String email = testHome.getSpecificUrl(
-				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 10);
+		String date = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
+		String email = "automation" + date + "@yopmail.com";
 		signUpPage.inputEmail_individual(email);
 		// password
 		String password = testHome.getSpecificUrl(
@@ -76,11 +78,18 @@ public class TestSignUp_3 {
 		// click Create Account
 		signUpPage.clickCreateAccountbtn();
 
-		// check Assertion
-		System.out.println("Check warning message is displayed if User input existed email");
-		signUpPage.waitExpectedConditions_element_xpath("/html/body/section/div/div/form/p");
-		signUpPage.checkAssertion_xpath("/html/body/section/div/div/form/p",
-				"Email has already been taken. You might have already created an account with this email. Please check your email to active your account.");
+		// check Assertion User can click on [Create Account] button, Create account
+		// successful
+		System.out.println("User can click on [Create Account] button, Create account successful");
+		System.out.println(email);
+		signUpPage.waitExpectedConditions_element_xpath("//*[@id=\"dialogContent_0\"]");
+		// //signUpPage.checkAssertion_xpath("//*[@id=\"dialogContent_0\"]",
+		// "Thank you for registering.\n" + "An email has been sent to email " + email +
+		// ".\n"
+		// + "Please check your email and active the account.");
+		// Click OK
+		signUpPage.waitExpectedConditions_element_xpath("/html/body/div[3]/md-dialog/section/div[2]/button");
+		signUpPage.click_by_xpath("/html/body/div[3]/md-dialog/section/div[2]/button");
 	}
 
 	@AfterMethod

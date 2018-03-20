@@ -18,7 +18,8 @@ import org.webdriver.autorater.TestHome;
 /**
  * @author du
  * 
- *         Check warning message is displayed if User input existed email fields
+ *         Check warning message is displayed if User leaves blank any required
+ *         fields
  */
 public class TestSignUp_2 {
 
@@ -50,37 +51,21 @@ public class TestSignUp_2 {
 		// click individual btn
 		signUpPage.waitExpectedConditions_element_xpath("/html/body/section/div/div/div/ul/li[1]/a");
 		signUpPage.clickIndividualbtn();
-
-		// input existed email into [Email] and valid value into other fields
-		// firstname
-		String firstname = testHome.getSpecificUrl(
-				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 6);
-		signUpPage.inputFirstName_individual(firstname);
-		// lastname
-		String lastname = testHome.getSpecificUrl(
-				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 8);
-		signUpPage.inputLastName_individual(lastname);
-		// email
-		String email = testHome.getSpecificUrl(
-				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 10);
-		signUpPage.inputEmail_individual(email);
-		// password
-		String password = testHome.getSpecificUrl(
-				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 12);
-		signUpPage.inputPassword_individual(password);
-		// confirm password
-		String confirmPassword = testHome.getSpecificUrl(
-				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 14);
-		signUpPage.inputConfirmPassword_individual(confirmPassword);
-
 		// click Create Account
 		signUpPage.clickCreateAccountbtn();
 
-		// check Assertion
-		System.out.println("Check warning message is displayed if User input existed email");
-		signUpPage.waitExpectedConditions_element_xpath("/html/body/section/div/div/form/p");
-		signUpPage.checkAssertion_xpath("/html/body/section/div/div/form/p",
-				"Email has already been taken. You might have already created an account with this email. Please check your email to active your account.");
+		// Check Assertion
+		System.out.println("Empty FirstName");
+		signUpPage.checkAssertion_xpath("/html/body/section/div/div/form/div[1]/p", "Please enter your first name");
+		System.out.println("Empty LastName");
+		signUpPage.checkAssertion_xpath("/html/body/section/div/div/form/div[2]/p", "Please enter your last name");
+		System.out.println("Empty Email");
+		signUpPage.checkAssertion_xpath("/html/body/section/div/div/form/div[3]/p[1]", "Please enter your email");
+		System.out.println("Empty Password");
+		signUpPage.checkAssertion_xpath("/html/body/section/div/div/form/div[4]/p[2]", "Please enter your password");
+		System.out.println("Empty Confirm Password");
+		signUpPage.checkAssertion_xpath("/html/body/section/div/div/form/div[5]/p[1]",
+				"Please enter your confirm password");
 	}
 
 	@AfterMethod

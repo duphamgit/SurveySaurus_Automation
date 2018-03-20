@@ -24,4 +24,8 @@ Password
 123456789
 ConfirmPassword
 123456789
-
+#Case: Check User can not login if email is not verified yet
+Email
+automation_notactivated@yopmail.com
+Password
+123456789
