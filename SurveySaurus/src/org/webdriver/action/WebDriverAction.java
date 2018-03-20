@@ -26,6 +26,11 @@ public class WebDriverAction {
 		this.driver = driver;
 	}
 
+	// Enable geckodriver for Windows version
+	public void enableGeckodriver() {
+		System.setProperty("webdriver.gecko.driver", "src/geckodriver.exe");
+	}
+
 	// click by ID
 	public void click_by_id(String locator) {
 		// click function on a element by ID
@@ -167,6 +172,7 @@ public class WebDriverAction {
 		Boolean isPresent = driver.findElements(By.xpath(locator)).size() > 0;
 		return isTrue;
 	}
+
 	// Assertion by xpath
 	public void checkAssertion_xpath(String locator, String value) {
 		try {
@@ -177,6 +183,7 @@ public class WebDriverAction {
 			System.out.println("---FAIL---");
 		}
 	}
+
 	// Assertion by Page contain url
 	public void checkAssertion_url(String url) {
 		try {
@@ -187,7 +194,7 @@ public class WebDriverAction {
 			System.out.println("---FAIL---");
 		}
 	}
-	
+
 	// Read Url from a file
 	public String getUrl(String file) throws IOException {
 		BufferedReader in = new BufferedReader(new FileReader(file));
