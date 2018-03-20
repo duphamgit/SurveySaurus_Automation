@@ -34,12 +34,12 @@ public class TestSignIn_1 {
 	@Test
 
 	public void testSignIn_1() throws IOException, InterruptedException {
-		String url = testHome.getSpecificUrl("/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignInDataset", 0);
+		String url = testHome.getSpecificUrl("src/SignInDataset", 0);
 		testHome.navigatetoHomePage(url);
 
 		// Input email & password
-		String email = testHome.getSpecificUrl("/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignInDataset", 3 - 1);
-		String password = testHome.getSpecificUrl("/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignInDataset", 4 - 1);
+		String email = testHome.getSpecificUrl("src/SignInDataset", 3 - 1);
+		String password = testHome.getSpecificUrl("src/SignInDataset", 4 - 1);
 		homePage.inputEmail(email);
 		homePage.inputPassword(password);
 

@@ -37,8 +37,7 @@ public class TestForgotPassword_1 {
 	@Test
 
 	public void testForgotPassword_1() throws IOException, InterruptedException {
-		String url = testHome.getSpecificUrl(
-				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/ForgotPasswordDataset", 1);
+		String url = testHome.getSpecificUrl("src/ForgotPasswordDataset", 1);
 		testHome.navigatetoHomePage(url);
 
 		// click Forgot Password btn

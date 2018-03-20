@@ -40,13 +40,11 @@ public class TestSignUp_4 {
 	@Test
 	public void testSignUp_4() throws IOException, InterruptedException {
 		// Home Page
-		String url = testHome.getSpecificUrl(
-				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 1);
+		String url = testHome.getSpecificUrl("src/SignUpDataset", 1);
 		testHome.navigatetoHomePage(url);
 
 		// click SignUp btn
-		String signup_url = testHome.getSpecificUrl(
-				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 3);
+		String signup_url = testHome.getSpecificUrl("src/SignUpDataset", 3);
 		homePage.clickSignUpbtn();
 		homePage.waitExpectedConditions_url(signup_url);
 		// click individual btn
@@ -55,24 +53,20 @@ public class TestSignUp_4 {
 
 		// input existed email into [Email] and valid value into other fields
 		// firstname
-		String firstname = testHome.getSpecificUrl(
-				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 6);
+		String firstname = testHome.getSpecificUrl("src/SignUpDataset", 6);
 		signUpPage.inputFirstName_individual(firstname);
 		// lastname
-		String lastname = testHome.getSpecificUrl(
-				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 8);
+		String lastname = testHome.getSpecificUrl("src/SignUpDataset", 8);
 		signUpPage.inputLastName_individual(lastname);
 		// email
 		String date = new SimpleDateFormat("Md_Hmss").format(Calendar.getInstance().getTime());
 		String email = "individual_" + date + "@yopmail.com";
 		signUpPage.inputEmail_individual(email);
 		// password
-		String password = testHome.getSpecificUrl(
-				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 12);
+		String password = testHome.getSpecificUrl("src/SignUpDataset", 12);
 		signUpPage.inputPassword_individual(password);
 		// confirm password
-		String confirmPassword = testHome.getSpecificUrl(
-				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 14);
+		String confirmPassword = testHome.getSpecificUrl("src/SignUpDataset", 14);
 		signUpPage.inputConfirmPassword_individual(confirmPassword);
 
 		// click Create Account

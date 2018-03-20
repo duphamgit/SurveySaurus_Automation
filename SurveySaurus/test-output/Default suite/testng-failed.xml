@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="org.webdriver.tests.TestForgotPassword_3">
+      <class name="org.webdriver.tests.TestSignIn_1">
         <methods>
-          <include name="testForgotPassword_3"/>
+          <include name="testSignIn_1"/>
           <include name="setUp"/>
           <include name="end"/>
         </methods>
-      </class> <!-- org.webdriver.tests.TestForgotPassword_3 -->
+      </class> <!-- org.webdriver.tests.TestSignIn_1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

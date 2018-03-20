@@ -39,13 +39,11 @@ public class TestSignUp_Organization_3 {
 	@Test
 	public void TestSignUp_organization_3() throws IOException, InterruptedException {
 		// Home Page
-		String url = testHome.getSpecificUrl(
-				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 1);
+		String url = testHome.getSpecificUrl("src/SignUpDataset", 1);
 		testHome.navigatetoHomePage(url);
 
 		// click SignUp btn
-		String signup_url = testHome.getSpecificUrl(
-				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 3);
+		String signup_url = testHome.getSpecificUrl("src/SignUpDataset", 3);
 		homePage.clickSignUpbtn();
 		homePage.waitExpectedConditions_url(signup_url);
 		// click Organization btn

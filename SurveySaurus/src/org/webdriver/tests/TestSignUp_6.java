@@ -37,15 +37,12 @@ public class TestSignUp_6 {
 
 	public void testSignUp_6() throws IOException, InterruptedException {
 		// open url
-		String url = testHome.getSpecificUrl(
-				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 1);
+		String url = testHome.getSpecificUrl("src/SignUpDataset", 1);
 		testHome.navigatetoHomePage(url);
 
 		// Input email & password
-		String email = testHome.getSpecificUrl(
-				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 28);
-		String password = testHome.getSpecificUrl(
-				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 30);
+		String email = testHome.getSpecificUrl("src/SignUpDataset", 28);
+		String password = testHome.getSpecificUrl("src/SignUpDataset", 30);
 		homePage.inputEmail(email);
 		homePage.inputPassword(password);
 

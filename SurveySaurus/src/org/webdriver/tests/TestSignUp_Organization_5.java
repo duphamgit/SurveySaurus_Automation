@@ -40,13 +40,11 @@ public class TestSignUp_Organization_5 {
 	@Test
 	public void testSignUp_organization_5() throws IOException, InterruptedException {
 		// Home Page
-		String url = testHome.getSpecificUrl(
-				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 1);
+		String url = testHome.getSpecificUrl("src/SignUpDataset", 1);
 		testHome.navigatetoHomePage(url);
 
 		// click SignUp btn
-		String signup_url = testHome.getSpecificUrl(
-				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 3);
+		String signup_url = testHome.getSpecificUrl("src/SignUpDataset", 3);
 		homePage.clickSignUpbtn();
 		homePage.waitExpectedConditions_url(signup_url);
 		// click organization btn
@@ -55,12 +53,10 @@ public class TestSignUp_Organization_5 {
 
 		// input existed email into [Email] and valid value into other fields
 		// firstname
-		String firstname = testHome.getSpecificUrl(
-				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 33);
+		String firstname = testHome.getSpecificUrl("src/SignUpDataset", 33);
 		signUpPage.inputFirstName_individual(firstname);
 		// lastname
-		String lastname = testHome.getSpecificUrl(
-				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 35);
+		String lastname = testHome.getSpecificUrl("src/SignUpDataset", 35);
 		signUpPage.inputLastName_individual(lastname);
 		// email
 
@@ -68,39 +64,31 @@ public class TestSignUp_Organization_5 {
 		String email = "organization_" + date + "@yopmail.com";
 		signUpPage.inputEmail_organization(email);
 		// password
-		String password = testHome.getSpecificUrl(
-				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 39);
+		String password = testHome.getSpecificUrl("src/SignUpDataset", 39);
 		signUpPage.inputPassword_individual(password);
 		// confirm password
-		String confirmPassword = testHome.getSpecificUrl(
-				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 41);
+		String confirmPassword = testHome.getSpecificUrl("src/SignUpDataset", 41);
 		signUpPage.inputConfirmPassword_individual(confirmPassword);
 		// company name
-		String companyname = testHome.getSpecificUrl(
-				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 43);
+		String companyname = testHome.getSpecificUrl("src/SignUpDataset", 43);
 		signUpPage.inputCompanyName_organization(companyname);
 
 		// phone number
-		String phonenumber = testHome.getSpecificUrl(
-				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 45);
+		String phonenumber = testHome.getSpecificUrl("src/SignUpDataset", 45);
 		signUpPage.inputPhoneNumber_organization(phonenumber);
 
 		// address
-		String address = testHome.getSpecificUrl(
-				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 47);
+		String address = testHome.getSpecificUrl("src/SignUpDataset", 47);
 		signUpPage.inputAddress_organization(address);
 		// city
-		String city = testHome.getSpecificUrl(
-				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 49);
+		String city = testHome.getSpecificUrl("src/SignUpDataset", 49);
 		signUpPage.inputCity_organization(city);
 		// zip code
-		String zipcode = testHome.getSpecificUrl(
-				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 51);
+		String zipcode = testHome.getSpecificUrl("src/SignUpDataset", 51);
 		signUpPage.inputZipCode_organization(zipcode);
 
 		// state
-		String state = testHome.getSpecificUrl(
-				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 53);
+		String state = testHome.getSpecificUrl("src/SignUpDataset", 53);
 		signUpPage.inputState_organization(state);
 
 		// click Create Account

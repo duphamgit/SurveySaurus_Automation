@@ -38,8 +38,7 @@ public class TestForgotPassword_3 {
 	@Test
 
 	public void testForgotPassword_3() throws IOException, InterruptedException {
-		String url = testHome.getSpecificUrl(
-				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/ForgotPasswordDataset", 1);
+		String url = testHome.getSpecificUrl("src/ForgotPasswordDataset", 1);
 		testHome.navigatetoHomePage(url);
 
 		// click Forgot Password btn
@@ -47,8 +46,7 @@ public class TestForgotPassword_3 {
 		homePage.clickForgotPasswordbtn();
 		// Check User can click on [Submit] button and an email is sent to inputted
 		// emails
-		String email = testHome.getSpecificUrl(
-				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/ForgotPasswordDataset", 4);
+		String email = testHome.getSpecificUrl("src/ForgotPasswordDataset", 4);
 		forgotPasswordPage.sendKey_name("email", email);
 		// click SUBMIT btn
 		forgotPasswordPage.clickSubmitbtn();
@@ -67,8 +65,9 @@ public class TestForgotPassword_3 {
 		// redirect to [Change password] screen
 		String yopmail = "http://yopmail.com/automation_forgotpassword";
 		testHome.navigatetoHomePage(yopmail);
-		//testHome.waitExpectedConditions_element_xpath("/html/body/div/div[1]/div[1]");
-		//testHome.checkAssertion_xpath("/html/body/div/div[1]/div[1]", "SurveySaurus Password Reset");
+		// testHome.waitExpectedConditions_element_xpath("/html/body/div/div[1]/div[1]");
+		// testHome.checkAssertion_xpath("/html/body/div/div[1]/div[1]", "SurveySaurus
+		// Password Reset");
 		System.out.println("Got Reset Password Email");
 		testHome.checkAssertion_url("http://www.yopmail.com/en/?automation_forgotpassword");
 	}
