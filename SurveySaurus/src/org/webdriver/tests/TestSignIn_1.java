@@ -26,6 +26,7 @@ public class TestSignIn_1 {
 
 	@BeforeMethod
 	public void setUp() {
+		System.setProperty("webdriver.gecko.driver","src/geckodriver.exe");
 		driver = new FirefoxDriver();
 		testHome = new TestHome(driver);
 		homePage = new HomePage(driver);
