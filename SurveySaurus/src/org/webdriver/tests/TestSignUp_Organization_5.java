@@ -20,9 +20,9 @@ import org.webdriver.autorater.TestHome;
 /**
  * @author du
  * 
- *         User can click on [Create Account] button, Create account successful
+ *         Check warning message is displayed if User input existed email fields
  */
-public class TestSignUp_4 {
+public class TestSignUp_Organization_5 {
 
 	WebDriver driver;
 	TestHome testHome;
@@ -38,7 +38,7 @@ public class TestSignUp_4 {
 	}
 
 	@Test
-	public void testSignUp_4() throws IOException, InterruptedException {
+	public void testSignUp_organization_5() throws IOException, InterruptedException {
 		// Home Page
 		String url = testHome.getSpecificUrl(
 				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 1);
@@ -49,44 +49,67 @@ public class TestSignUp_4 {
 				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 3);
 		homePage.clickSignUpbtn();
 		homePage.waitExpectedConditions_url(signup_url);
-		// click individual btn
-		signUpPage.waitExpectedConditions_element_xpath("/html/body/section/div/div/div/ul/li[1]/a");
-		signUpPage.clickIndividualbtn();
+		// click organization btn
+		signUpPage.waitExpectedConditions_element_xpath("/html/body/section/div/div/div/ul/li[2]/a");
+		signUpPage.clickOrganizationbtn();
 
 		// input existed email into [Email] and valid value into other fields
 		// firstname
 		String firstname = testHome.getSpecificUrl(
-				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 6);
+				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 33);
 		signUpPage.inputFirstName_individual(firstname);
 		// lastname
 		String lastname = testHome.getSpecificUrl(
-				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 8);
+				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 35);
 		signUpPage.inputLastName_individual(lastname);
 		// email
+
 		String date = new SimpleDateFormat("Md_Hmss").format(Calendar.getInstance().getTime());
-		String email = "individual_" + date + "@yopmail.com";
-		signUpPage.inputEmail_individual(email);
+		String email = "organization_" + date + "@yopmail.com";
+		signUpPage.inputEmail_organization(email);
 		// password
 		String password = testHome.getSpecificUrl(
-				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 12);
+				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 39);
 		signUpPage.inputPassword_individual(password);
 		// confirm password
 		String confirmPassword = testHome.getSpecificUrl(
-				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 14);
+				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 41);
 		signUpPage.inputConfirmPassword_individual(confirmPassword);
+		// company name
+		String companyname = testHome.getSpecificUrl(
+				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 43);
+		signUpPage.inputCompanyName_organization(companyname);
+
+		// phone number
+		String phonenumber = testHome.getSpecificUrl(
+				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 45);
+		signUpPage.inputPhoneNumber_organization(phonenumber);
+
+		// address
+		String address = testHome.getSpecificUrl(
+				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 47);
+		signUpPage.inputAddress_organization(address);
+		// city
+		String city = testHome.getSpecificUrl(
+				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 49);
+		signUpPage.inputCity_organization(city);
+		// zip code
+		String zipcode = testHome.getSpecificUrl(
+				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 51);
+		signUpPage.inputZipCode_organization(zipcode);
+
+		// state
+		String state = testHome.getSpecificUrl(
+				"/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/SignUpDataset", 53);
+		signUpPage.inputState_organization(state);
 
 		// click Create Account
-		signUpPage.clickCreateAccountbtn_individual();
+		signUpPage.clickCreateAccountbtn_organization();
 
-		// check Assertion User can click on [Create Account] button, Create account
-		// successful
+		// check Assertion
 		System.out.println("User can click on [Create Account] button, Create account successful");
 		System.out.println(email);
 		signUpPage.waitExpectedConditions_element_xpath("//*[@id=\"dialogContent_0\"]");
-		// //signUpPage.checkAssertion_xpath("//*[@id=\"dialogContent_0\"]",
-		// "Thank you for registering.\n" + "An email has been sent to email " + email +
-		// ".\n"
-		// + "Please check your email and active the account.");
 		// Click OK
 		signUpPage.waitExpectedConditions_element_xpath("/html/body/div[3]/md-dialog/section/div[2]/button");
 		signUpPage.click_by_xpath("/html/body/div[3]/md-dialog/section/div[2]/button");

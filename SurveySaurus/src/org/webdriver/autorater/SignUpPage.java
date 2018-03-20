@@ -81,27 +81,27 @@ public class SignUpPage extends TestHome {
 	public void inputConfirmPassword_organization(String value) {
 		sendKey_name("confirmPassword", value);
 	}
-	
+
 	public void inputCompanyName_organization(String value) {
 		sendKey_name("companyname", value);
 	}
-	
+
 	public void inputPhoneNumber_organization(String value) {
 		sendKey_name("phonenumber", value);
 	}
-	
+
 	public void inputAddress_organization(String value) {
 		sendKey_name("address", value);
 	}
-	
+
 	public void inputCity_organization(String value) {
 		sendKey_name("city", value);
 	}
-	
+
 	public void inputZipCode_organization(String value) {
 		sendKey_name("zipcode", value);
 	}
-	
+
 	public void inputState_organization(String value) {
 		sendKey_name("state", value);
 	}
@@ -110,9 +110,14 @@ public class SignUpPage extends TestHome {
 	public void clickCheckBoxArgree_organization() {
 		click_by_xpath("/html/body/section/div/div/form/div[6]/label/span");
 	}
-	
+
 	// Click Create Account btn
-	public void clickCreateAccountbtn() {
+	public void clickCreateAccountbtn_individual() {
 		click_by_xpath("/html/body/section/div/div/form/div[7]/button");
 	}
+
+	public void clickCreateAccountbtn_organization() {
+		click_by_xpath("/html/body/section/div/div/form/div[8]/button");
+	}
+
 }
