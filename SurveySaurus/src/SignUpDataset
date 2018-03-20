@@ -1,0 +1,27 @@
+#HomePage
+https://staging-swf.surveysaurus.com/
+#SignUp
+https://staging-swf.surveysaurus.com/register
+#Case: Check warning message is displayed if User input existed email 
+FirstName
+Du
+LastName
+Pham
+Email
+dupham.autorater@yopmail.com
+Password
+123456789
+ConfirmPassword
+123456789
+#Case: User can click on [Create Account] button, Create account successful
+FirstName
+Du
+LastName
+Pham
+Email
+dupham.autorater@yopmail.com
+Password
+123456789
+ConfirmPassword
+123456789
+

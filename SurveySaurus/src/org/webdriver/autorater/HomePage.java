@@ -9,7 +9,7 @@ import org.openqa.selenium.WebDriver;
  * @author du
  *
  */
-public class HomePage extends TestAutorater {
+public class HomePage extends TestHome {
 
 	/**
 	 * @param driver

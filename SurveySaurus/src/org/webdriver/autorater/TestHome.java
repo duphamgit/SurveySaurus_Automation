@@ -20,8 +20,8 @@ public class TestHome extends WebDriverAction {
 		open(url);
 		return new HomePage(driver);
 	}
-	public HomePage navigatetoSignUpPage(String url) {
+	public SignUpPage navigatetoSignUpPage(String url) {
 		open(url);
-		return new HomePage(driver);
+		return new SignUpPage(driver);
 	}
 }
