@@ -13,6 +13,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -27,9 +28,12 @@ public class WebDriverAction {
 	}
 
 	// Enable geckodriver for Windows version
-	public void enableGeckodriver() {
-		System.setProperty("webdriver.gecko.driver", "src/geckodriver.exe");
-	}
+//	public void setUpFirefoxDriver() {
+//
+//		driver = new FirefoxDriver();
+//		// Enable on Windows
+//		//System.setProperty("webdriver.gecko.driver", "src/geckodriver.exe");
+//	}
 
 	// click by ID
 	public void click_by_id(String locator) {

@@ -12,6 +12,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.webdriver.autorater.ForgotPasswordPage;
 import org.webdriver.autorater.HomePage;
+import org.webdriver.autorater.SignUpPage;
 import org.webdriver.autorater.TestHome;
 
 /**
@@ -70,6 +71,9 @@ public class TestForgotPassword_3 {
 		// Password Reset");
 		System.out.println("Got Reset Password Email");
 		testHome.checkAssertion_url("http://www.yopmail.com/en/?automation_forgotpassword");
+//		// Testcase 4
+//		forgotPasswordPage.waitExpectedConditions_xpath("/html/body/div/div[3]/div[2]/p[2]");
+//		forgotPasswordPage.click_by_xpath("/html/body/div/div[3]/div[2]/p[2]/a");
 	}
 
 	@AfterMethod

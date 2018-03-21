@@ -12,48 +12,52 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import org.webdriver.autorater.HomePage;
+import org.webdriver.autorater.ProjectListPage;
 import org.webdriver.autorater.TestHome;
 
 /**
  * @author du
  *
  */
-public class TestSignIn_1 {
+public class TestProject_1 {
 
 	WebDriver driver;
 	TestHome testHome;
 	HomePage homePage;
+	ProjectListPage projectListPage;
 
 	@BeforeMethod
 	public void setUp() {
 
 		driver = new FirefoxDriver();
 		testHome = new TestHome(driver);
+		projectListPage = new ProjectListPage(driver);
 		homePage = new HomePage(driver);
 	}
 
 	@Test
 
-	public void testSignIn_1() throws IOException, InterruptedException {
-		String url = testHome.getSpecificUrl("src/SignInDataset", 0);
+	public void testProject_1() throws IOException, InterruptedException {
+		String url = testHome.getSpecificUrl("src/ProjectListDataset", 0);
 		testHome.navigatetoHomePage(url);
 
+		// Login
 		// Input email & password
-		String email = testHome.getSpecificUrl("src/SignInDataset", 3 - 1);
-		String password = testHome.getSpecificUrl("src/SignInDataset", 4 - 1);
+		String email = testHome.getSpecificUrl("src/ProjectListDataset", 3);
+		String password = testHome.getSpecificUrl("src/ProjectListDataset", 5);
 		homePage.inputEmail(email);
 		homePage.inputPassword(password);
 
 		// click Sign In btn
 		homePage.clickSignInbtn();
 
-		// assertion
-		homePage.sleep(10000);
-
-		// Empty Email
-		System.out.println("Empty Email");
-		homePage.checkAssertion_xpath("/html/body/section/section/div/form/div[1]/p[1]", "Please enter your email");
-
+		// check Url
+		System.out.println(url + "project-list");
+		projectListPage.waitExpectedConditions_url(url + "project-list");
+		System.out.println(url + "project-list");
+		projectListPage.checkAssertion_url(url + "project-list");
+		// check GUI
+		projectListPage.checkAssertion();
 	}
 
 	@AfterMethod

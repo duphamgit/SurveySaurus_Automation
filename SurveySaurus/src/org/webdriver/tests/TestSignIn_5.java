@@ -52,7 +52,7 @@ public class TestSignIn_5 {
 
 		// Check Sign In successfully
 		System.out.println("Check Sign In successfully");
-		homePage.checkAssertion_url("https://beta-swf.surveysaurus.com/project-list");
+		homePage.checkAssertion_url(url+"project-list");
 
 	}
 
