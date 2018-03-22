@@ -1,25 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="39522" started-at="2018-03-21T04:23:04Z" finished-at="2018-03-21T04:23:43Z">
+  <suite name="Default suite" duration-ms="56546" started-at="2018-03-22T04:16:27Z" finished-at="2018-03-22T04:17:24Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="39522" started-at="2018-03-21T04:23:04Z" finished-at="2018-03-21T04:23:43Z">
-      <class name="org.webdriver.tests.TestProject_1">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:org.webdriver.tests.TestProject_1@76f2b07d]" name="setUp" is-config="true" duration-ms="3434" started-at="2018-03-21T04:23:04Z" finished-at="2018-03-21T04:23:07Z">
+    <test name="Default test" duration-ms="56546" started-at="2018-03-22T04:16:27Z" finished-at="2018-03-22T04:17:24Z">
+      <class name="org.webdriver.tests.TestForgotPassword_3">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:org.webdriver.tests.TestForgotPassword_3@305fd85d]" name="setUp" is-config="true" duration-ms="3784" started-at="2018-03-22T04:16:27Z" finished-at="2018-03-22T04:16:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testProject_1()[pri:0, instance:org.webdriver.tests.TestProject_1@76f2b07d]" name="testProject_1" duration-ms="35950" started-at="2018-03-21T04:23:07Z" finished-at="2018-03-21T04:23:43Z">
+        <test-method status="PASS" signature="testForgotPassword_3()[pri:0, instance:org.webdriver.tests.TestForgotPassword_3@305fd85d]" name="testForgotPassword_3" duration-ms="17867" started-at="2018-03-22T04:16:31Z" finished-at="2018-03-22T04:16:49Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testProject_1 -->
-        <test-method status="PASS" signature="end()[pri:0, instance:org.webdriver.tests.TestProject_1@76f2b07d]" name="end" is-config="true" duration-ms="107" started-at="2018-03-21T04:23:43Z" finished-at="2018-03-21T04:23:43Z">
+        </test-method> <!-- testForgotPassword_3 -->
+        <test-method status="PASS" signature="end()[pri:0, instance:org.webdriver.tests.TestForgotPassword_3@305fd85d]" name="end" is-config="true" duration-ms="701" started-at="2018-03-22T04:16:49Z" finished-at="2018-03-22T04:16:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- end -->
-      </class> <!-- org.webdriver.tests.TestProject_1 -->
+      </class> <!-- org.webdriver.tests.TestForgotPassword_3 -->
+      <class name="org.webdriver.tests.TestForgotPassword_2">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:org.webdriver.tests.TestForgotPassword_2@458c1321]" name="setUp" is-config="true" duration-ms="2928" started-at="2018-03-22T04:16:50Z" finished-at="2018-03-22T04:16:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testForgotPassword_2()[pri:0, instance:org.webdriver.tests.TestForgotPassword_2@458c1321]" name="testForgotPassword_2" duration-ms="13735" started-at="2018-03-22T04:16:53Z" finished-at="2018-03-22T04:17:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testForgotPassword_2 -->
+        <test-method status="PASS" signature="end()[pri:0, instance:org.webdriver.tests.TestForgotPassword_2@458c1321]" name="end" is-config="true" duration-ms="691" started-at="2018-03-22T04:17:06Z" finished-at="2018-03-22T04:17:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- end -->
+      </class> <!-- org.webdriver.tests.TestForgotPassword_2 -->
+      <class name="org.webdriver.tests.TestForgotPassword_1">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:org.webdriver.tests.TestForgotPassword_1@11438d26]" name="setUp" is-config="true" duration-ms="2808" started-at="2018-03-22T04:17:07Z" finished-at="2018-03-22T04:17:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testForgotPassword_1()[pri:0, instance:org.webdriver.tests.TestForgotPassword_1@11438d26]" name="testForgotPassword_1" duration-ms="13310" started-at="2018-03-22T04:17:10Z" finished-at="2018-03-22T04:17:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testForgotPassword_1 -->
+        <test-method status="PASS" signature="end()[pri:0, instance:org.webdriver.tests.TestForgotPassword_1@11438d26]" name="end" is-config="true" duration-ms="688" started-at="2018-03-22T04:17:23Z" finished-at="2018-03-22T04:17:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- end -->
+      </class> <!-- org.webdriver.tests.TestForgotPassword_1 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

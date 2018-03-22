@@ -1,0 +1,6 @@
+Geckodriver
+webdriver.gecko.driver
+Mac
+src/geckodriver
+Windows
+src/geckodriver.exe

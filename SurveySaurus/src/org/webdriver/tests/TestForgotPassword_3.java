@@ -4,6 +4,8 @@
 package org.webdriver.tests;
 
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -12,7 +14,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.webdriver.autorater.ForgotPasswordPage;
 import org.webdriver.autorater.HomePage;
-import org.webdriver.autorater.SignUpPage;
 import org.webdriver.autorater.TestHome;
 
 /**
@@ -29,7 +30,15 @@ public class TestForgotPassword_3 {
 	ForgotPasswordPage forgotPasswordPage;
 
 	@BeforeMethod
-	public void setUp() {
+	public void setUp() throws IOException {
+		/// Config Geckodriver
+		String file_geckodriver_config = "src/GeckodriverConfig";
+		String geckodriver = "webdriver.gecko.driver";
+		String environment_geckodriver = Files.readAllLines(Paths.get(file_geckodriver_config)).get(3);
+		// Edit in GeckodriverConfig at line 3:
+		// Mac: src/geckodriver
+		// Windows: src/geckodriver.exe
+		System.setProperty(geckodriver, environment_geckodriver);
 		driver = new FirefoxDriver();
 		testHome = new TestHome(driver);
 		homePage = new HomePage(driver);
@@ -71,9 +80,9 @@ public class TestForgotPassword_3 {
 		// Password Reset");
 		System.out.println("Got Reset Password Email");
 		testHome.checkAssertion_url("http://www.yopmail.com/en/?automation_forgotpassword");
-//		// Testcase 4
-//		forgotPasswordPage.waitExpectedConditions_xpath("/html/body/div/div[3]/div[2]/p[2]");
-//		forgotPasswordPage.click_by_xpath("/html/body/div/div[3]/div[2]/p[2]/a");
+		// // Testcase 4
+		// forgotPasswordPage.waitExpectedConditions_xpath("/html/body/div/div[3]/div[2]/p[2]");
+		// forgotPasswordPage.click_by_xpath("/html/body/div/div[3]/div[2]/p[2]/a");
 	}
 
 	@AfterMethod

@@ -4,6 +4,8 @@
 package org.webdriver.tests;
 
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Random;
 
 import org.openqa.selenium.WebDriver;
@@ -25,10 +27,20 @@ public class Test360Survey {
 	Survey360RaterPage raterPage360Survey;
 
 	@BeforeMethod
-	public void setUp() {
+	public void setUp() throws IOException {
+		/// Config Geckodriver
+		String file_geckodriver_config = "src/GeckodriverConfig";
+		String geckodriver = "webdriver.gecko.driver";
+		String environment_geckodriver = Files.readAllLines(Paths.get(file_geckodriver_config)).get(3);
+		// Edit in GeckodriverConfig at line 3:
+		// Mac: src/geckodriver
+		// Windows: src/geckodriver.exe
+		System.setProperty(geckodriver, environment_geckodriver);
+
 		driver = new FirefoxDriver();
 		testAutorater360Survey = new TestAutorater(driver);
 		raterPage360Survey = new Survey360RaterPage(driver);
+
 	}
 
 	@Test
