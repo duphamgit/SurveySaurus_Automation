@@ -33,7 +33,7 @@ public class Test360Survey {
 
 	@Test
 	public void Survey360Template_1() throws InterruptedException, IOException {
-		String file = "/Users/du/eclipse-workspace/SurveySaurus/src/url";
+		String file = "/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/url";
 		// numberOfTest number of test using get specific Url in File
 		for (int numberOfTest = 0; numberOfTest <= 19; numberOfTest++) {
 			String url = testAutorater360Survey.getSpecificUrl(file, numberOfTest);

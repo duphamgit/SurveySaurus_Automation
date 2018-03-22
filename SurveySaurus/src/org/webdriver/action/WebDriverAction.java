@@ -13,6 +13,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -25,6 +26,14 @@ public class WebDriverAction {
 		// TODO Auto-generated constructor stub
 		this.driver = driver;
 	}
+
+	// Enable geckodriver for Windows version
+//	public void setUpFirefoxDriver() {
+//
+//		driver = new FirefoxDriver();
+//		// Enable on Windows
+//		//System.setProperty("webdriver.gecko.driver", "src/geckodriver.exe");
+//	}
 
 	// click by ID
 	public void click_by_id(String locator) {
@@ -167,6 +176,7 @@ public class WebDriverAction {
 		Boolean isPresent = driver.findElements(By.xpath(locator)).size() > 0;
 		return isTrue;
 	}
+
 	// Assertion by xpath
 	public void checkAssertion_xpath(String locator, String value) {
 		try {
@@ -177,6 +187,7 @@ public class WebDriverAction {
 			System.out.println("---FAIL---");
 		}
 	}
+
 	// Assertion by Page contain url
 	public void checkAssertion_url(String url) {
 		try {
@@ -187,7 +198,7 @@ public class WebDriverAction {
 			System.out.println("---FAIL---");
 		}
 	}
-	
+
 	// Read Url from a file
 	public String getUrl(String file) throws IOException {
 		BufferedReader in = new BufferedReader(new FileReader(file));
