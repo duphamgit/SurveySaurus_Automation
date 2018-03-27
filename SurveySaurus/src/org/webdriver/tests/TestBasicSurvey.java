@@ -46,7 +46,7 @@ public class TestBasicSurvey {
 	public void BasicSurveyTemplate_1() throws InterruptedException, IOException {
 		String file = "/Users/du/eclipse-workspace/SurveySaurus_Automation/SurveySaurus/src/url";
 		// numberOfTest number of test using get specific Url in File
-		for (int numberOfTest = 0; numberOfTest <= 5000; numberOfTest++) {
+		for (int numberOfTest = 0; numberOfTest <= 1000; numberOfTest++) {
 			String url = testAutoraterBasicSurvey.getSpecificUrl(file, numberOfTest);
 			testAutoraterBasicSurvey.navigatetoBasicRaterPage(url);
 

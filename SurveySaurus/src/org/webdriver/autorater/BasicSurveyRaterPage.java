@@ -31,7 +31,7 @@ public class BasicSurveyRaterPage extends TestAutorater {
 		waitExpectedConditions_xpath(locator);
 		scrollElementIntoView_xpath(locator);
 		click_by_xpath(locator);
-		waitExpectedConditions_url("https://staging-swf.surveysaurus.com/rate-complete");
+		waitExpectedConditions_url("https://dev-swf.surveysaurus.com/rate-complete");
 	}
 
 	// Textbox
